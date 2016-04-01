@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load staticfiles %}
+	<title>Edit Product</title>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+	<header>
+		<h1>product name here</h1>
+		<a href="/products">Go to product listings</a>
+	</header>
+	<form id="product" action="/update/productid">
+		<label for="brand">Manufacturer/Brand: </label>
+		<select name="brand">
+			<option></option>	
+		</select>
+		<label for="name">Product Name: </label>
+		<input type="text" name="name" value="product name in here"></input>
+		<label for="price">Price: </label>
+		<input type="price" name="price" value="88.88"></input>
+		<label for="description">Description: </label>
+		<textarea name="description"></textarea>
+		<button type='submit' form="product"></button>
+		<form id="delete" action="/delete/productid">
+			<button type="submit" form="delete"></button>
+		</form>
+	</form>
+</body>
+</html>
